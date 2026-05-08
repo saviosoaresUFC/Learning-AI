@@ -1,0 +1,18 @@
+crimes_patrimoniais:
+  intent: "patrimonio"
+  pergunta_inicial: "Houve uso de violência, grave ameaça ou contato físico forçado?"
+  decisoes:
+    com_violencia:
+      fluxo: "roubo"
+      artigo: "Art. 157"
+      proxima_pergunta: "Foi utilizado algum tipo de arma de fogo ou arma branca (faca, canivete, etc)?"
+      opcoes:
+        sim: "ROUBO MAJORADO (Art. 157, § 2º-A, I) - Pena: 4 a 10 anos + aumento de 2/3."
+        nao: "ROUBO SIMPLES (Art. 157, caput) - Pena: 4 a 10 anos."
+    sem_violencia:
+      fluxo: "furto"
+      artigo: "Art. 155"
+      proxima_pergunta: "Houve rompimento de obstáculo, como quebrar um vidro ou tranca?"
+      opcoes:
+        sim: "FURTO QUALIFICADO (Art. 155, § 4º, I) - Pena: 2 a 8 anos."
+        nao: "FURTO SIMPLES (Art. 155, caput) - Pena: 1 a 4 anos."
